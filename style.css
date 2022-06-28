@@ -1,6 +1,23 @@
+body{
+  background-image: url('coffee-bean.bmp');
+}
+#app{
+  width: 50%;
+  border: 3px solid green;
+  background-color: goldenrod;
+}
 .center {
     margin: auto;
-    width: 50%;
-    border: 3px solid green;
     padding: 10px;
-  }
+    text-align: center;
+}
+.b {
+  background-color: green;
+  border: 4px;
+  border-color: black;
+  color: yellow;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 5%;
+ }
