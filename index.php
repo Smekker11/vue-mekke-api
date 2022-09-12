@@ -3,34 +3,8 @@
    <link rel="stylesheet" href="style.css">
    <script type="module" src="app.js"></script>
    <?php
-   $servername = "####";
-   $username = "####";
-   $password ="####";
-   $dbname = "####";
-   //sql connection
-   $conn = new mysqli($servername, $username, $password, $dbname);
-   if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-   }
-   //getting max id
-   $q = "SELECT * FROM ips WHERE id = (SELECT MAX(id) FROM ips)";
-   $qresult = $conn->query($q); 
-   if ($qresult->num_rows > 0) {
-    while($qrow = $qresult->fetch_assoc()) {
-      $mid = $qrow["id"];
-    }
-   }
-   //rand generation
-   $id = rand(1, $mid);
-   $l = "SELECT * FROM ips WHERE id = '$id'";
-   $lresult = $conn->query($l);
-   if($lresult->num_rows > 0) {
-    while($lrow = $lresult->fetch_assoc()){
-        $ip = $lrow["IP"];
-        $cc = $lrow["CountryCode"];
-        $city = $lrow["City"];
-    }
-   }
+   $response = array_values(json_decode(file_get_contents("https://smekker.go.ro/mekapi/ip"), true));
+   $details = $response[0]
    ?>
     <head>
         <title>vue amangas</title>
@@ -44,13 +18,13 @@
             </div>
         </div>
         <script>
-            var ip = "<?php echo $ip; ?>";
+            var ip = "<?php echo $details[IP] ?>";
             ip = window.ip;
-            var cc = "<?php echo $cc; ?>";
+            var cc = "<?php echo $details[CountryCode]; ?>";
             cc = window.cc;
-            var city = "<?php echo $city; ?>";
+            var city = "<?php echo $details[City]; ?>";
             city = window.city;
-            var id = "<?php echo $id; ?>";
+            var id = "<?php echo $details[id]; ?>";
             id = window.id;
             var sussy = new Audio('sus.mp3');
             sussy = window.sussy;
