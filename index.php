@@ -18,13 +18,13 @@
             </div>
         </div>
         <script>
-            var ip = "<?php echo $details[IP] ?>";
+            var ip = "<?php echo $details['IP']; ?>";
             ip = window.ip;
-            var cc = "<?php echo $details[CountryCode]; ?>";
+            var cc = "<?php echo $details['CountryCode']; ?>";
             cc = window.cc;
-            var city = "<?php echo $details[City]; ?>";
+            var city = "<?php echo $details['City']; ?>";
             city = window.city;
-            var id = "<?php echo $details[id]; ?>";
+            var id = "<?php echo $details['id']; ?>";
             id = window.id;
             var sussy = new Audio('sus.mp3');
             sussy = window.sussy;
