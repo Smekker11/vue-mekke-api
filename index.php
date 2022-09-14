@@ -3,8 +3,7 @@
    <link rel="stylesheet" href="style.css">
    <script type="module" src="app.js"></script>
    <?php
-   $response = array_values(json_decode(file_get_contents("https://smekker.go.ro/mekapi/ip"), true));
-   $details = $response[0]
+   $response = json_decode(file_get_contents("https://smekker.go.ro/mekapi/ip"), true);
    ?>
     <head>
         <title>vue amangas</title>
@@ -18,13 +17,13 @@
             </div>
         </div>
         <script>
-            var ip = "<?php echo $details['IP']; ?>";
+            var ip = "<?php echo $response['IP']; ?>";
             ip = window.ip;
-            var cc = "<?php echo $details['CountryCode']; ?>";
+            var cc = "<?php echo $response['CountryCode']; ?>";
             cc = window.cc;
-            var city = "<?php echo $details['City']; ?>";
+            var city = "<?php echo $response['City']; ?>";
             city = window.city;
-            var id = "<?php echo $details['id']; ?>";
+            var id = "<?php echo $response['id']; ?>";
             id = window.id;
             var sussy = new Audio('sus.mp3');
             sussy = window.sussy;
