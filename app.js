@@ -10,7 +10,7 @@ const { createApp } = Vue
     methods: {
         async kaki() {
             window.susSound();
-            this.ipaddr = "IP: " + ip + " | " + "CountryCode: " + cc + " | " + "City: " + city + " | " + "ID in mekkeDB: " + id;
+            this.ipaddr = "IP: " + ip + " | " + "CountryCode: " + cc + " | " + "Region: " + region + " | " + "ID in mekkeDB: " + id;
         }
     }
   }).mount('#app')
