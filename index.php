@@ -10,10 +10,15 @@
     </head>
     <body>
         <div id="app" class="center">
-            <h1 align="center">{{ message }}</h1>
-            <h1 align="center">{{ ipaddr }}</h1>
-            <div class="center">
-              <button class="b" v-on:click="kaki()">amangas sussy info</button>
+            <div class="api-random">
+              <h1 align="center">{{ message }}</h1>
+              <h1 align="center">{{ ipaddr }}</h1>
+              <div class="center-button-div">
+                  <button class="b" v-on:click="kaki()">amangas sussy info</button>
+              </div>
+            </div>
+            <div class="api-query">
+                <h1>cacak</h1>
             </div>
         </div>
         <script>
@@ -21,8 +26,8 @@
             ip = window.ip;
             var cc = "<?php echo $response['CountryCode']; ?>";
             cc = window.cc;
-            var city = "<?php echo $response['City']; ?>";
-            city = window.city;
+            var region = "<?php echo $response['Region']; ?>";
+            region = window.region;
             var id = "<?php echo $response['id']; ?>";
             id = window.id;
             var sussy = new Audio('sus.mp3');
