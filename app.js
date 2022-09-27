@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: 'kazakhstan ograzayet nam bambarderofkey',
+        message: 'random IP from DB',
         ipaddr: ''
       }
     },
