@@ -47,5 +47,5 @@ $_SESSION['curlres'] = $curlres;
 
 echo $_SESSION['curlres'];
 
-header("Location: ../");
+header("Location: ./");
 ?>
