@@ -22,6 +22,11 @@
               </div>
             </div>
             <br>
+            <div class="stats">
+                <h1>Country statistics:</h1>
+                <iframe class="full-iframe" src="https://smekker.go.ro/mekapi/stats"></iframe>
+            </div>
+            <br>
             <div class="api-full-dump">
                 <h1>Full IP dump</h1>
                 <iframe class="full-iframe" src="https://smekker.go.ro/mekapi/ip/full" title="ip db full dump"></iframe>
