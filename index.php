@@ -29,7 +29,6 @@
             <br>
             <div class="api-query">
                 <h1>Your location:</h1>
-                <iframe src="http://www.openstreetmap.org/search?query=" id="api-gmap-fr"></iframe>
                 <iframe class="indi-gmap" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=<?php 
                 $ip = $_SERVER['REMOTE_ADDR'];
                 $insetip = "INSERT INTO ips (IP,CountryCode,Region) VALUES ('$ip','$details->country','$details->region')";
