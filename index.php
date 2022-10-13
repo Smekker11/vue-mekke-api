@@ -31,7 +31,7 @@
                 <h1>Your location:</h1>
                 <iframe class="indi-gmap" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=<?php 
                 $ip = $_SERVER['REMOTE_ADDR'];
-                $insetip = "INSERT INTO ips (IP,CountryCode,Region) VALUES ('$ip','$details->country','$details->region')";
+                $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
                 echo $details->region;
                 ?>e+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             </div>
