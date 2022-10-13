@@ -29,11 +29,11 @@
             <br>
             <div class="api-query">
                 <h1>Your location:</h1>
-                <iframe width="80%" height="50%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=<?php 
+                <iframe width="80%" height="50%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q='<?php 
                 $ip = $_SERVER['REMOTE_ADDR'];
                 $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
                 echo $details->region;
-                ?>e+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                ?>'e+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             </div>
             <br>
             <div class="api-query">
