@@ -72,3 +72,11 @@ body{
  #p-marg{
   margin: 0;
  }
+#api-gmap-fr{
+  width: 50%;
+  height: 30%;
+}
+.indi-gmap{
+  width: 80%;
+  height: 60%;
+}
